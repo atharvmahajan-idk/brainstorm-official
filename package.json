@@ -1,0 +1,25 @@
+{
+  "name": "brainstorm-official",
+  "version": "1.0.0",
+  "description": "not just to share , it helps u to think plan and build",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atharvmahajan-idk/brainstorm-official.git"
+  },
+  "author": "Atharv mahajan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atharvmahajan-idk/brainstorm-official/issues"
+  },
+  "homepage": "https://github.com/atharvmahajan-idk/brainstorm-official#readme",
+  "dependencies": {
+    "dotenv": "^17.1.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
