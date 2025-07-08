@@ -2,14 +2,24 @@
 import express from "express"
 import dotenv from "dotenv"
 import ejs from "ejs"
+import path from "path"
 
 dotenv.config()
 
 const app = express()
 const port =  process.env.PORT
+
+app.use("/public" ,  express.static(path.resolve("public")))
+
+app.set("view engine", "ejs")
+app.set("views"  ,  path.resolve("src/views"))
+console.log(path.resolve("views/"))
+
+
+
 app.route("/")
 .get((req, res) => {
-    res.send('hello world')
+    res.render("planner")
 })
 
 app.listen(port ,  ()=>{
