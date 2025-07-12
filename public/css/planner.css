@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0D0F14;
+    /* overflow: hidden; */
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+nav{
+    width: 100%;
+    height: 10%;
+    /* background-color: crimson; */
+    /* padding:1vw ; */
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+.nav_container{
+    width: 95%;
+    height: 70%;
+    background-color: #0D0F14;
+    display: flex;
+    justify-content: space-between;
+}
+.dropDown_btn , .collabrates{
+    height: 100%;
+    width: 8%;
+    border: #7F45DA solid 0.2vw;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    cursor: pointer;
+    /* font-weight: lighter; */
+}
+.search{
+    height: 100%;
+    width: 50%;
+    /* background-color: crimson; */
+    display: flex;
+    /* justify-content: space-evenly; */
+    gap: 5%;
+}
+.collabrates{
+    width:10%;
+    background-color: #6200ff;
+    border: none;
+    font-size: 1.2vw;
+}
+.search_bar{
+    width: 80%;
+    height: 100%;
+    background-color: #0D0F14;
+    border: 0.1vw solid   #7F45DA;
+    border-radius: 1.20vw;
+    padding-left: 2vw;
+    font-size:2vw;
+    outline: none;
+    
+}
+
+.search_btn{
+    /* width: 9%; */
+    /* min-width: 40px; Ensures it won't shrink/ */
+    height: 100% ;
+    aspect-ratio: 1/1; 
+    border-radius: 50%;
+    background-color: #0D0F14;
+    border: 0.1vw solid   #7F45DA;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search_btn img{
+    width: 60%;
+}
