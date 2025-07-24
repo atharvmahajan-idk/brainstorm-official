@@ -4,6 +4,8 @@ import dotenv from "dotenv"
 import ejs from "ejs"
 import path from "path"
 
+import docsRouter from  "./routes/docs.js"
+
 dotenv.config()
 
 const app = express()
@@ -15,7 +17,7 @@ app.set("view engine", "ejs")
 app.set("views"  ,  path.resolve("src/views"))
 console.log(path.resolve("views/"))
 
-
+app.use("/docs" , docsRouter)
 
 app.route("/")
 .get((req, res) => {

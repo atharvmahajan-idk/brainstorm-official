@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Brainstorm</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      :root {
+        --deep-navy: #0f0f1c;
+        --dark-black-blue: #1a1a2e;
+        --card-bg: #1b1c2d;
+        --text-title: #ffffff;
+        --text-desc: #cfcfd7;
+        --glow-teal: #00ffc8;
+        --glow-yellow: #f5c400;
+        --glow-purple: #8a7fff;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(
+          to bottom,
+          var(--deep-navy),
+          var(--dark-black-blue)
+        );
+        color: var(--text-desc);
+      }
+      .bg-custom-dark {
+        background-color: var(--card-bg);
+      }
+      .text-custom-title {
+        color: var(--text-title);
+      }
+      .text-custom-desc {
+        color: var(--text-desc);
+      }
+      .glow-teal {
+        box-shadow: 0 0 15px 0 rgba(0, 255, 200, 0.3);
+      }
+      .glow-yellow {
+        box-shadow: 0 0 15px 0 rgba(245, 196, 0, 0.3);
+      }
+      .glow-purple {
+        box-shadow: 0 0 15px 0 rgba(138, 127, 255, 0.3);
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body class="text-custom-light">
+    <div class="min-h-screen flex flex-col">
+      <header class="bg-transparent">
+        <div class="container mx-auto px-6 py-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <button
+                id="back_btn"
+                class="flex items-center text-white hover:text-gray-300 transform transition-transform duration-200 hover:scale-110"
+              >
+                <span class="material-icons">arrow_back_ios</span>
+              </button>
+              <div class="text-2xl font-bold text-custom-title">Brainstorm</div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <button
+                class="flex items-center bg-[var(--card-bg)] text-white px-4 py-2 rounded-lg transition-all duration-300 hover:bg-opacity-80 hover:shadow-lg hover:-translate-y-1"
+              >
+                <span class="material-icons mr-2">description</span>
+                Create Doc
+              </button>
+              <button
+                class="flex items-center bg-[var(--card-bg)] text-white px-4 py-2 rounded-lg transition-all duration-300 hover:bg-opacity-80 hover:shadow-lg hover:-translate-y-1"
+              >
+                <span class="material-icons mr-2">group_add</span>
+                Collaborate
+              </button>
+              <button
+                class="text-white hover:text-gray-300 transform transition-transform duration-200 hover:scale-110"
+              >
+                <span class="material-icons">settings</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="container mx-auto px-6 py-8 flex-grow">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        >
+          <div
+            class="card bg-custom-dark rounded-lg p-6 flex flex-col justify-between transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-[var(--glow-purple)]"
+          >
+            <div>
+              <h3 class="text-xl font-semibold text-custom-title">
+                Project Proposal
+              </h3>
+              <p class="text-base text-custom-desc mt-2">
+                Initial draft of the project proposal, outlining key objectives
+                and deliverables.
+              </p>
+            </div>
+            <div class="mt-6 flex items-center justify-end">
+              <button
+                class="flex items-center space-x-2 text-sm text-[var(--glow-purple)] hover:text-opacity-80 transform transition-transform duration-200 hover:scale-105"
+              >
+                <span class="material-icons text-base">auto_awesome</span>
+                <span>Plan with AI</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="card bg-custom-dark rounded-lg p-6 flex flex-col justify-between transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-[var(--glow-teal)]"
+          >
+            <div>
+              <h3 class="text-xl font-semibold text-custom-title">
+                Marketing Plan Q3
+              </h3>
+              <p class="text-base text-custom-desc mt-2">
+                Detailed marketing strategy for the upcoming quarter, including
+                budget allocation.
+              </p>
+            </div>
+            <div class="mt-6 flex items-center justify-end">
+              <button
+                class="flex items-center space-x-2 text-sm text-[var(--glow-teal)] hover:text-opacity-80 transform transition-transform duration-200 hover:scale-105"
+              >
+                <span class="material-icons text-base">auto_awesome</span>
+                <span>Plan with AI</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="card bg-custom-dark rounded-lg p-6 flex flex-col justify-between transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-[var(--glow-yellow)]"
+          >
+            <div>
+              <h3 class="text-xl font-semibold text-custom-title">
+                Brainstorming Notes
+              </h3>
+              <p class="text-base text-custom-desc mt-2">
+                Raw ideas and notes from our last brainstorming session on new
+                features.
+              </p>
+            </div>
+            <div class="mt-6 flex items-center justify-end">
+              <button
+                class="flex items-center space-x-2 text-sm text-[var(--glow-yellow)] hover:text-opacity-80 transform transition-transform duration-200 hover:scale-105"
+              >
+                <span class="material-icons text-base">auto_awesome</span>
+                <span>Plan with AI</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+        document.getElementById("back_btn").addEventListener('click' , ()=>{
+            window.location.href = "/"
+        })
+    </script>
+  </body>
+</html>
